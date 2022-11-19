@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 100vh;    
+}
+
+.texto {
+    margin-bottom: 30px;
+}
+
+#sair {
+    width: 120px;
+    height: 40px;
+    border-radius: 300px;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+#sair:hover {
+    background-color: blue;
+    border: white;
+    transition: background-color 1s;
+    color: white;
+}
+
+form{
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+}
+
+.erro-card {
+    width: 300px;
+    height: 42px;
+    position: absolute;
+    left: 12px;
+    border-radius: 6px;
+    border: 3px solid rgba(202, 38, 38, 0.534);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    /* background-color: ; */
+    color: rgb(163, 7, 7);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.4s;
+}
+
+.acerto-card {
+    width: 300px;
+    height: 42px;
+    position: absolute;
+    left: 12px;
+    border-radius: 6px;
+    border: 3px solid rgba(52, 221, 10, 0.534);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    /* background-color: ; */
+    color: rgb(16, 66, 3);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.4s;
+}
+
+.erro-card > span {
+    padding-left: 8px;
+}
+
+.button {
+    width: full;
+    background: #0f4775;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button:hover{
+    background: #4179a3;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}

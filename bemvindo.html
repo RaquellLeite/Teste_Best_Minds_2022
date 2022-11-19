@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliveira Trade</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+        <h1 class="texto" >Bem-vindo a Oliveira Trade</h1>
+
+        <button class="button" style="display: none;" onclick="sair()" id="sair">Sair</button>
+
+        <div class="nao-logado">
+            <p>Você Já tem um cadastro? <a href="./login.html">Fazer login</a></p>
+            <p>Ou se cadastre <a href="./cadastro.html">por aqui</a></p>
+        </div>
+
+
+
+
+    <script >
+        let user = JSON.parse(localStorage.getItem("user"));
+
+        const textoEl = document.querySelector(".texto");
+        const mensagens = document.querySelector(".nao-logado");
+        const sairEl = document.getElementById("sair");
+
+        if (user) {
+            textoEl.textContent = `Bem-vindo a  Oliveira Trade, ${user.nome}`
+            mensagens.remove()
+            sairEl.style = ""
+        }
+
+        function sair() {
+            console.log('dsad')
+            localStorage.removeItem('user')
+            document.location.reload()
+        }
+
+    </script>
+</body>
+</html>
