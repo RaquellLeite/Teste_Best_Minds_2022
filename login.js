@@ -4,6 +4,11 @@ const senhaLoginEl = document.getElementById("senhaLogin")
 
 function fazerLogin() {
     const users = JSON.parse(localStorage.getItem("users"))
+    if(!users) {
+        alert("Não tem nenhum usuário cadastrado no sistema!");
+        return;
+    }
+    
     const email = emailLoginEl.value;
     const senha = senhaLoginEl.value;
 

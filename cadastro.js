@@ -71,18 +71,18 @@ function register () {
     if (erros.length === 0) {
         let users = JSON.parse(localStorage.getItem("users"))
 
-        if (typeof users === 'object') {
-            users = Array.from(users);
-        }
-
-        const user = users.find(user => user.email === email);
-
-        if (user) {
-            criarAviso("E-mail já em uso", 0, true)
-            return 
-        }
-
         if (users) {
+            if (typeof users === 'object') {
+                users = Array.from(users);
+            }
+    
+            const user = users.find(user => user.email === email);
+    
+            if (user) {
+                criarAviso("E-mail já em uso", 0, true)
+                return ;
+            }
+    
             users.push({nome, email, senha});
             localStorage.setItem("users", JSON.stringify(users));
         } else {
